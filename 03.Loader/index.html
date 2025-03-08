@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(14, 2, 246);
+        
+    }
+    .wrapper{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+
+    }
+    .wrapper .loader{
+
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 20px;
+        
+        
+    }
+    .loader .load {
+        
+        width: 30px;
+        height: 30px;
+        background: azure;
+        color: transparent;
+        border-radius: 50%;
+        margin: 0 12px;
+
+       animation: loading 0.8s ease infinite;
+    }
+    .loader .one{
+        animation-delay: 0.3s;
+    }
+    .loader .two{
+        animation-delay: 0.4s;
+        
+    }
+    .loader .three{
+        animation-delay: 0.5s;
+        
+    }
+
+
+
+    @keyframes loading {
+        0%{
+            width: 30px;
+            height: 30px;
+        }
+        
+        50%{
+            width: 20px;
+            height: 20px;
+        }
+        
+    }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <div class="loader">
+            <li class="load one"></li>
+            <li class="load two"></li>
+            <li class="load three"></li>
+            <li class="load four"></li>
+        </div>
+    </section>
+    
+</body>
+</html>

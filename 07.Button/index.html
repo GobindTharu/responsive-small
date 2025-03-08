@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button styles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font: sans-serif;
+      }
+      body {
+        background: #28282734;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Button */
+      .Btn {
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 20px 50px;
+        border: 3px solid rgb(248, 245, 245);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s;
+        border-radius: 3px;
+      }
+
+      /* Button 1 */
+      .content .btn1::before {
+        content: "Download";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fdfffe;
+        color: rgb(14, 14, 14);
+        transform: translateY(-100%);
+        transition: all 0.4s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content .btn1:hover:before {
+        transform: translateY(0%);
+      }
+
+      /* Button 2 */
+      .content .btn2::before {
+        content: "Click Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #07e7ef;
+        color: rgb(14, 14, 14);
+
+        transform: rotateX(270deg);
+        transition: all 0.5s;
+        transform-origin: top;
+        transition-delay: 0.5s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content .btn2::after {
+        content: "Click Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #7b07ef;
+        color: rgb(14, 14, 14);
+
+        transform: rotateX(270deg);
+        transition: all 1s;
+        transform-origin: top;
+        transition-delay: 0.5s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content .btn2:hover::before,
+      .content .btn2:hover:after {
+        transform: rotateX(0);
+      }
+
+      .btn3 {
+        line-height: 16px;
+        letter-spacing: 1rem;
+        font-weight: bold;
+        padding: 20px;
+        border: none;
+      }
+      .content .btn3::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 100%;
+        height: 100%;
+
+        z-index: -1;
+        mix-blend-mode: multiply;
+        background: #289ce9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.3s;
+        transform-origin: top;
+      }
+      .content .btn3::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 100%;
+        height: 100%;
+
+        background-color: #65e0d1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        mix-blend-mode: multiply;
+        z-index: -1;
+
+        transition: all 0.3s;
+        transform: bottom;
+      }
+
+      .btn3:hover::before {
+        top: -6px;
+        left: 0;
+        transform: perspective(1000px) rotateX(65deg);
+      }
+      .btn3:hover::after {
+        top: 22px;
+        left: 0;
+        transform: perspective(1000px) rotateX(-65deg);
+      }
+
+      .content .btn4::before {
+        content: "";
+        position: absolute;
+        /* top: -15px; */
+        top: 5px;
+        left: 3px;
+        width: 45px;
+        height: 27px;
+        background-color: transparent;
+        border-top: 4px solid #fdfffe;
+        border-left: 4px solid #fdfffe;
+        z-index: -1;
+        transition: all 0.2s;
+      }
+      .content .btn4::after {
+        content: "";
+        position: absolute;
+        right: 5px;
+        bottom: 3px;
+        width: 45px;
+        height: 27px;
+        background-color: transparent;
+        border-right: 4px solid #fdfffe;
+        border-bottom: 4px solid #fdfffe;
+        z-index: -1;
+        transition: all 0.2s;
+      }
+      .content .btn4:hover:before {
+        width: 100%;
+        height: 100%;
+      }
+      .content .btn4:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+
+      .content .btn4:hover {
+        /* background-color: #289ce9; */
+        background-color: #acaeaf47;
+        border: none;
+      }
+
+      .btn5 {
+        /* position: absolute; */
+        border-radius: 100px;
+        padding: 1rem 4rem;
+        background: #ffffff;
+        color: #000;
+        transition: all 0.2s;
+      }
+      .btn5::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        transition: all 1s;
+        z-index: -1;
+      }
+      .btn5:hover::before {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+      .btn:hover {
+        transform: translateX(-3px);
+        box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+      }
+      .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="content">
+        <a class="Btn btn1">Button1</a>
+        <a class="Btn btn2">Button2</a>
+        <a class="Btn btn3">Button3</a>
+        <a class="Btn btn4">Button4</a>
+        <a class="Btn btn5">Button5</a>
+        <a class="Btn btn6">Button6</a>
+        <a class="Btn btn7">Button7</a>
+        <a class="Btn btn8">Button8</a>
+      </div>
+    </section>
+  </body>
+</html>

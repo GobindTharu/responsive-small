@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Video</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .hero {
+          width: 100%;
+          height: 100%;
+          background-color: linear-gradient(
+              rgba(46, 45, 45, 0.2),
+              rgba(70, 71, 73, 0.3)
+              );
+              position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .back-video {
+        
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+    .text{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.text h1{
+    font-size: 140px;
+    font-weight: 600;
+    /* color: #fff; */
+    -webkit-text-stroke: 3px #fff;
+    color: transparent;
+    
+    
+}
+.text h1:hover{
+    color: #fcfbfbc6;
+}
+.text p{
+    font-size: 40px;
+    color: #ec8609;
+
+
+}
+.text a{
+    display: inline-block;
+    border: 3px solid #fcfbfb;
+    padding: 20px 60px;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    
+    
+}
+.text a:hover{
+    background: rgba(251, 253, 253, 0.812);
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video{
+        width: 100%;
+        height: auto;
+
+    }
+
+}
+@media (max-aspect-ratio: 16/9) {
+     .back-video{
+          width: 100%;
+          height: 100vh;
+     }
+}
+@media screen and (max-width: 480px) {
+    .text h1{
+        font-size: 35px;
+         font-weight: 200;
+    -webkit-text-stroke: 1px #fff;
+    
+    }
+    .text p{
+       font-size: 12px;
+    }
+}
+.text a{
+    font-size: 7px;
+}
+@media screen and (min-width: 481px) {
+    .text h1{
+        font-size: 70px;
+         font-weight: 400;
+    -webkit-text-stroke: 2px #fff;
+    
+    }
+    .text p{
+       font-size: 20px;
+    }
+}
+.text a{
+    font-size: 12px;
+}
+@media screen and (min-width: 769px) {
+    .text h1{
+        font-size: 105px;
+         font-weight: 500;
+    -webkit-text-stroke: 2px #fff;
+    
+    }
+    .text p{
+       font-size: 30px;
+    }
+}
+.text a{
+    font-size: 18px;
+}
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <video autoplay loop muted play-inline class="back-video">
+        <source src="2895749-uhd_4096_2160_24fps.mp4" />
+      </video>
+    </section>
+    <section class="text">
+      <h1>Journey</h1>
+      <p>Welcome, To My Web Dev Projects.</p>
+      <a href="#">Explore More</a>
+    </section>
+  </body>
+</html>

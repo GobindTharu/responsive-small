@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navigation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: #26262749;
+        padding: 12px 20px;
+    }
+    ul li {
+        list-style: none;
+        padding: 1.2rem;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: bold;
+        position: relative;
+        padding: 5px 20px;
+      }
+
+      /* content 2 css */
+      a::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 6px 0;
+        transform: scaleY(2);
+        opacity: 0;
+        transition: all 1s;
+        border-top: 3px solid rgb(255, 255, 255);
+        border-bottom: 3px solid rgb(255, 255, 255);
+      }
+    a:hover::before {
+        transform: scaleY(1.2);
+        opacity: 1;
+      }
+    a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transform: scaleY(0);
+        transition: 1s;
+        z-index: -1;
+    }
+    a:hover::after{
+        transform: scaleX(1);
+        opacity: 1;
+        background: #03e8ec;
+
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">information</a></li>
+        <li><a href="">portfolio</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+    </section>
+  </body>
+</html>

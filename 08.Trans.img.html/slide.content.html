@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding content</title>
+    <style>
+        *{
+            margin: 0;
+            padding: o;
+            box-sizing: border-box;
+
+        }
+        body{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ababacd7;
+
+        }
+.container{
+    height: 400px;
+    width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;4\Aa
+    /* overflow: hidden; */
+    border: 0 10px 20px rgb(0, 0, 0, 0.2);
+
+}
+.container .content1 img{
+    width: 100%;
+    position: absolute;
+
+
+}
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="content1">
+            <img src="pexels-ericaonthego-18574117.jpg" alt="Loading">
+        </div>
+        <div class="content2">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic explicabo, debitis est incidunt nemo! Incidunt id quibusdam libero expedita repudiandae, a odit.</p>
+        </div>
+    </section>
+</body>
+</html>

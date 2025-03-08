@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation styles on hover</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background: #353434a7;
+      }
+      .container ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .container ul li {
+        list-style: none;
+        padding: 1.2rem 5px;
+      }
+
+      .container ul li a {
+        text-decoration: none;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        color: #fff;
+        position: relative;
+        display: block;
+        transition: 1s;
+      }
+
+      /* Content 1 css  */
+      .content1 li a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #ffffff;
+        z-index: 1;
+        transition: all 1s;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      .content1 li a:hover::before {
+        transform: scaleX(1);
+      }
+
+      .content1 li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        transform: scaleX(0);
+        transition: all 1s;
+      }
+
+      .content1 li a:hover:after {
+        transform: scaleX(1);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <ul class="content1">
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">information</a></li>
+        <li><a href="">portfolio</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+    </section>
+  </body>
+</html>

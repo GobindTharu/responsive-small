@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shopify</title>
+<!-- ==Css Link== -->
+ <link rel="stylesheet" href="style.css">
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+</head>
+<body>
+    <nav>
+        <!-- sidebar -->
+        <ul class="sidebar">
+            <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#blogs">blogs</a></li>
+            <li><a href="#products">products</a></li>
+            <li><a href="#forum">forum</a></li>
+            <li><a href="#login">login</a></li>
+
+        </ul>
+
+        <!-- navbar -->
+        <ul>
+            <li class="logo"><a href="#logo"><img src="./image/logo.png" alt=""></a></li>
+            <li class="hideOnMobile"><a href="#home">home</a></li>
+            <li class="hideOnMobile"><a href="#blogs">blogs</a></li>
+            <li class="hideOnMobile"><a href="#products">products</a></li>
+            <li class="hideOnMobile"><a href="#forum">forum</a></li>
+            <li class="hideOnMobile"><a href="#login">login</a></li>
+            <li class="menu-Btn" onclick=showSideBar()><a href="#">
+
+                <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </a></li>
+        </ul>
+    </nav>
+      
+    
+    <!--=====   Javascript links =====-->
+    <script src="script.js"></script>
+</body>
+</html>

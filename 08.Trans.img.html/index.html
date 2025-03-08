@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hover to translate image</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        /* width: 100%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e4e3e3ae;
+      }
+      .container {
+        box-shadow: 5px 20px 30px rgb(48, 48, 48);
+        width: 600px;
+        height: 400px;
+        /* padding: 1rem 2rem; */
+        overflow: hidden;
+        border: 3px solid rgb(110, 110, 110);
+        position: relative;
+      }
+      .container img {
+        width: 100%;
+        transition: all 1s;
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* z-index: -1; */
+        background: rgb(110, 110, 110);
+        color: #ffff;
+        transform: translateX(-100%);
+        transition: all 1s;
+      }
+      .container:hover .content {
+        transform: translateX(0%);
+        z-index: 1;
+      }
+      .container:hover img {
+        transform: translateX(100%);
+        z-index: 1;
+      }
+      h1 {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      h4 {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        line-height: 40px;
+        text-transform: uppercase;
+      }
+      p {
+        line-height: 20px;
+        text-indent: 40px;
+        padding: 1rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <img
+        src="../08.Trans.img.html/pexels-ericaonthego-18574116.jpg"
+        alt="Loading....."
+      />
+      <article class="content">
+        <h1>Memories</h1>
+        <h4>
+          The deep feel on Love to Remove <br />The loneliness and Heal Your
+          Heart....
+        </h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
+          amet ad praesentium fugit quis eum sed totam at ipsam. adipisicing
+          elit. Assumenda amet ad praesentium
+        </p>
+      </article>
+    </section>
+  </body>
+</html>
